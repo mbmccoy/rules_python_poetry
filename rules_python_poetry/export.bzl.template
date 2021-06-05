@@ -4,6 +4,7 @@ def _poetry_export_impl(repository_ctx):
         [
             "poetry",
             "export",
+            "--without-hashes",
             "-f", "requirements.txt",
             "-o",
             repository_ctx.path("requirements.txt")
